@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="bpAll" prefHeight="800.0" prefWidth="1500.0" styleClass="background" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Project_Info_Editor">
+   <bottom>
+      <Button fx:id="btnSubmitInfo" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btn_CreateProject" prefWidth="1520.0" styleClass="addBtn" text="Create Proejct" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </BorderPane.margin>
+      </Button>
+   </bottom>
+   <top>
+      <GridPane styleClass="header" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
+               <children>
+                  <Label fx:id="lbProjectTitle" alignment="CENTER" styleClass="title_main" text="New Project">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#btn_ReturnToMainMenu" styleClass="actionBtn" text="Back" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#btn_PresentExistingProjects" styleClass="actionBtn" text="List" />
+               </children>
+            </HBox>
+         </children>
+      </GridPane>
+   </top>
+   <center>
+      <ScrollPane fitToWidth="true" BorderPane.alignment="CENTER">
+         <content>
+            <VBox prefWidth="2000.0" spacing="5.0">
+               <children>
+                  <Label styleClass="title_sub" text="Project Name:">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="tfProjectName" promptText="Can't Be Empty">
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Label styleClass="title_sub" text="Project Title:">
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="tfProjectTitle">
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Label styleClass="title_sub" text="Project Status:">
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <HBox prefHeight="16.0" prefWidth="500.0" spacing="20.0">
+                     <children>
+                        <RadioButton fx:id="rbStatusOngoing" mnemonicParsing="false" selected="true" text="Ongoing">
+                           <styleClass>
+                              <String fx:value="focusedOutline" />
+                              <String fx:value="paragraph" />
+                           </styleClass>
+                        </RadioButton>
+                        <RadioButton fx:id="rbStatusReturnTo" mnemonicParsing="false" text="Return To">
+                           <styleClass>
+                              <String fx:value="focusedOutline" />
+                              <String fx:value="paragraph" />
+                           </styleClass>
+                        </RadioButton>
+                        <RadioButton fx:id="rbStatusComplete" mnemonicParsing="false" text="Complete">
+                           <styleClass>
+                              <String fx:value="focusedOutline" />
+                              <String fx:value="paragraph" />
+                           </styleClass>
+                        </RadioButton>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <Label styleClass="title_sub" text="Project Purpose:">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextArea fx:id="tfProjectPurpose" maxHeight="1.7976931348623157E308" prefHeight="100.0" wrapText="true">
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </VBox.margin>
+                  </TextArea>
+                  <HBox alignment="CENTER_LEFT" spacing="10.0">
+                     <children>
+                        <Label styleClass="title_sub" text="Project Summary:">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Button mnemonicParsing="false" onAction="#btn_InformUserAboutMarkUpLanguage" styleClass="actionBtn" text="M" />
+                     </children>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <TextArea fx:id="tfProjectSummary" maxHeight="1.7976931348623157E308" prefHeight="300.0" wrapText="true">
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </VBox.margin>
+                     <styleClass>
+                        <String fx:value="textArea" />
+                        <String fx:value="content" />
+                     </styleClass>
+                  </TextArea>
+                  <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="10.0" styleClass="container">
+                     <children>
+                        <Label styleClass="title_sub" text="Software Used:">
+                           <VBox.margin>
+                              <Insets bottom="5.0" top="5.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <HBox fx:id="hbTech" />
+                        <Label styleClass="title_sub" text="Device Compatibility:">
+                           <VBox.margin>
+                              <Insets bottom="5.0" top="5.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <HBox fx:id="hbDevices" />
+                     </children>
+                  </VBox>
+               </children>
+               <styleClass>
+                  <String fx:value="container" />
+                  <String fx:value="body" />
+               </styleClass>
+            </VBox>
+         </content>
+         <styleClass>
+            <String fx:value="background" />
+            <String fx:value="scroll-pane" />
+            <String fx:value="viewport" />
+         </styleClass>
+      </ScrollPane>
+   </center>
+</BorderPane>

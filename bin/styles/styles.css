@@ -1,0 +1,486 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+/*
+ * Button Styles
+ */
+
+/**
+ ***************************************************************
+ * BACKGROUND STYLES
+ ***************************************************************
+ */
+ .header {
+    -fx-background-color: #25262A;
+    -fx-padding: 15.0 10.0 15.0 10.0;
+ }
+
+.background {
+	-fx-background-color: #30333A;
+}
+.container {
+    -fx-border-color : transparent;
+    -fx-border-width : 0;
+}
+.body{
+    -fx-padding: 0.8em;
+}
+
+VBox{
+}
+HBox{
+    -fx-spacing: .8em;
+}
+
+/**
+ ***************************************************************
+ * BUTTON STYLES
+ ***************************************************************
+ */
+ .editableBtn{
+    -fx-text-fill: white;
+    -fx-background-color: transparent;
+    -fx-border: none;
+ }
+
+ .editableBtn: hover{
+    -fx-cursor: hand;
+     -fx-text-fill: #FF0847;
+     -fx-background-color: transparent;
+     -fx-border: none;
+  }
+
+.deleteBtn {
+	-fx-text-fill: #FFFFFF;
+	-fx-background-color: #F44336;
+	-fx-font-weight: bold;
+	-fx-border-radius: 0;
+}
+.deleteBtn:hover{
+    -fx-cursor: hand;
+	-fx-text-fill: #000000;
+	-fx-background-color: #FFFFFF;
+	-fx-font-weight: bold;
+	-fx-border-radius: 0 0 0 0;
+	-fx-font-weight: bold;
+	-fx-effect: dropshadow( three-pass-box , rgba(244,240,174,0.6) , 5, 0.0 , 0 , 1 );
+}
+.addBtn{
+	-fx-text-fill: white;
+	-fx-background-color: #FF0847;
+	-fx-font-weight: bold;
+	-fx-border-radius: 0;
+}
+.addBtn:hover{
+    -fx-cursor: hand;
+	-fx-text-fill: #FF0847;
+	-fx-background-color: white;
+	-fx-font-weight: bold;
+	-fx-border-radius: 0 0 0 0;
+	-fx-font-weight: bold;
+	-fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+}
+.actionBtn {
+	-fx-text-fill: white;
+	-fx-background-color: #5B323C;
+	-fx-font-weight: bold;
+	-fx-border-radius: 0;
+}
+.actionBtn:hover{
+    -fx-cursor: hand;
+	-fx-text-fill: #5B323C;
+	-fx-background-color: white;
+	-fx-font-weight: bold;
+	-fx-border-radius: 0 0 0 0;
+	-fx-font-weight: bold;
+	-fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+}
+.navigationButton{
+	-fx-text-fill: #FFFFFF;
+	-fx-background-color: #17202A;
+	-fx-font-weight: bold;
+	-fx-border-radius: 0;
+}
+/**
+ ***************************************************************
+ * LABEL STYLES
+ ***************************************************************
+ */
+ @font-face {
+     font-family: 'Lobster';
+     src: url('/res/Lobster-Regular.ttf');
+ }
+
+ .title_main {
+    -fx-font-size: 16pt;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+ }
+ .mainTitle{
+     -fx-font-size: 24pt;
+     -fx-font-family: "Lobster";
+ }
+ .title_sub {
+    -fx-font-size: 12pt;
+	-fx-font-weight: bold;
+    -fx-text-fill: white;
+ }
+ .paragraph {
+    -fx-font-size: 10pt;
+    -fx-text-fill:  white;
+ }
+
+.subText{
+    -fx-text-fill: #79828D;
+}
+
+/**
+ ***************************************************************
+ * TEXT FIELD STYLES
+ ***************************************************************
+ */
+.text-field{
+    -fx-background-color: #383A41;
+    -fx-text-fill: white;
+}
+
+.text-field:focused{
+    -fx-text-fill: white;
+    -fx-faint-focus-color: transparent;
+}
+
+.text-area {
+    -fx-text-fill: white;
+     -fx-background-insets: 0;
+     -fx-background-color: #383A41;
+    -fx-text-box-border: transparent;
+     -fx-box-border: none;
+     -fx-border-color: red;
+     -fx-border-width: 0px;
+ }
+
+ .text-area .content {
+     -fx-background-color: #383A41;
+    -fx-text-box-border: transparent;
+     -fx-box-border: none;
+     -fx-border-color: red;
+     -fx-border-width: 0px;
+ }
+
+ .text-area:focused .content {
+     -fx-background-color: #383A41;
+    -fx-text-box-border: transparent;
+     -fx-box-border: none;
+     -fx-border-color: red;
+     -fx-border-width: 0px;
+ }
+
+ .text-area:focused {
+    -fx-text-fill: white;
+    -fx-text-box-border: transparent;
+     -fx-box-border: none;
+     -fx-border-color: transparent;
+     -fx-border-width: 0px;
+ }
+
+ .text-area .content {
+     -fx-text-fill: white;
+    -fx-text-box-border: transparent;
+     -fx-box-border: none;
+     -fx-border-color: red;
+     -fx-border-width: 0px;
+ }
+
+/**
+ ***************************************************************
+ * CHECKBOX && RADIO BUTTONS STYLES
+ ***************************************************************
+ */
+.check-box {
+-fx-text-fill:white;
+}
+.check-box .box {
+-fx-text-fill:white;
+-fx-background-color: #383A41;
+-fx-border-color: transparent;
+-fx-border-radius:10px;
+}
+
+.check-box:selected .mark {
+-fx-text-fill:white;
+-fx-background-color: #FF0847;
+
+}
+
+.check-box:selected .box {
+-fx-text-fill:white;
+-fx-background-color: #FF0847;
+}
+
+.radio-button .radio{
+    -fx-border-width: 0px   ;
+    -fx-border-color: transparent  ;
+    -fx-background-color: #5B323C ;
+    -fx-background-image: null;
+    -fx-border-radius: 15px;
+}
+.radio-button .radio:selected{
+    -fx-background-color : transparent ;
+    -fx-background-image : null  ;
+}
+.radio-button:selected .dot {
+  -fx-mark-color: #FF0847;
+}
+/**
+ ***************************************************************
+ * OTHER STYLES
+ ***************************************************************
+ */
+
+
+/*********** TAB STYLES **********/
+
+.tab-pane .tab-header-area .tab-header-background {
+	-fx-background-color: #30333A;
+}
+
+.tab-pane
+{
+	-fx-background-color: #30333A;
+}
+
+.tab-pane VBox{
+    -fx-padding: 10 10 10 10 10;
+}
+
+.tab{
+	-fx-background-color: #30333A;
+}
+.tab-pane .tab
+{
+	-fx-background-color: #30333A;
+	-fx-border-width: 0 0 2 0;
+	-fx-border-color: #5B323C;
+}
+
+.tab-pane .tab-header-area:hover{
+    -fx-cursor: hand;
+}
+.tab .tab-header-area:hover{
+    -fx-cursor: hand;
+}
+.tab-pane: focused{
+    -fx-focus-color: transparent;
+    -fx-focused-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+.tab: focused{
+    -fx-focused-color: transparent;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+.tab-pane .tab:selected
+{
+	-fx-background-color: #30333A;
+	-fx-border-width: 0 0 2 0;
+	-fx-border-color: #FF0847;
+}
+
+.tab .tab-label {
+    -fx-alignment: CENTER;
+    -fx-text-fill: #5B323C;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+
+.tab:selected .tab-label {
+    -fx-alignment: CENTER;
+    -fx-text-fill: #FF0847;
+}
+
+.todoList .tab-label {
+    -fx-alignment: CENTER;
+    -fx-text-fill: #5B323C;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+.todoList:selected .tab-label {
+    -fx-font-size: 16px;
+    -fx-alignment: CENTER;
+    -fx-text-fill: #FF0847;
+}
+
+
+.tab-pane:top *.tab-header-area {
+	-fx-background-color: #30333A;
+    -fx-background-insets: 0, 0 0 1 0;
+ /* -fx-padding: 0.416667em 0.166667em 0.0em 0.833em; /* 5 2 0 10 */
+    -fx-padding: 0.416667em 0.166667em 0.0em 0.0em; /* overridden as 5 2 0 0 */
+}
+/*********** SLIDER STYLES **********/
+ .slider .track{
+    -fx-background-color: white;
+    -fx-text-fill: white;
+ }
+ .slider{
+    -fx-tick-mark-fill: white;
+    -fx-tick-text-fill: white;
+   }
+
+ .slider .axis .axis-tick-mark, .slider .axis .axis-minor-tick-mark {
+     -fx-fill: null;
+     -fx-stroke: white;
+ }
+
+/*********** SPLIT PANE STYLES **********/
+.split-pane:vertical > .split-pane-divider {
+   -fx-background-color: transparent;
+}
+.split-pane:horizontal > .split-pane-divider {
+   -fx-background-color: transparent;
+}
+.changeScreenButton{
+	
+}
+
+/*********** SCROLL PANE STYLES **********/
+.scroll-pane > .viewport {
+   -fx-background-color: #30333A;
+   -fx-border-color: transparent;
+}
+
+.scroll-bar{
+	-fx-border-color: #30333A;
+}
+.scroll-bar:focused{
+	-fx-border-color: #30333A;
+}
+.scroll-bar:vertical{
+    -fx-width: 0.7em;
+    -fx-background-color:transparent;
+
+}.scroll-bar:vertical .thumb {
+     -fx-background-color: white;
+ 	-fx-background-insets: 0, 0, 0;
+ 	-fx-background-radius: 1em;
+ }
+
+.scroll-bar:vertical .increment-arrow,
+.scroll-bar:vertical .decrement-arrow,
+.scroll-bar:vertical .increment-button,
+.scroll-bar:vertical .decrement-button {
+	-fx-width: 0;
+    -fx-background-color: transparent;
+}
+.scroll-bar:horizontal{
+    -fx-width: 0.7em;
+    -fx-background-color:transparent;
+
+}.scroll-bar:horizontal .thumb {
+     -fx-background-color: white;
+ 	-fx-background-insets: 0, 0, 0;
+ 	-fx-background-radius: 1em;
+ }
+
+.scroll-bar:horizontal .increment-arrow,
+.scroll-bar:horizontal .decrement-arrow,
+.scroll-bar:horizontal .increment-button,
+.scroll-bar:horizontal .decrement-button {
+	-fx-width: 0;
+    -fx-background-color: transparent;
+}
+/*********** HASH TAGS **********/
+.hashTag_Clicked{
+    -fx-background-color: #F44336;
+    -fx-cursor: hand;
+	-fx-text-fill: white;
+	-fx-background-radius: 30 30 30 30;
+	-fx-font-weight: bold;
+}
+
+.hashTag_unClicked{
+    -fx-background-color: #5B323C;
+    -fx-cursor: hand;
+	-fx-text-fill: white;
+	-fx-background-radius: 30 30 30 30;
+	-fx-font-weight: bold;
+}
+
+.hashTag_unClicked: hover{
+    -fx-background-color: #F44336;
+}
+
+/******** CARD *******/
+
+.card{
+    -fx-effect: dropshadow(three-pass-box , rgba(0,0,0,0.2), 10, 0 , 5, 5);
+    -fx-background-color: white;
+    -fx-padding:10px;
+}
+.card:hover{
+    -fx-background-color: white;
+    -fx-effect: dropshadow(one-pass-box , rgba(0,0,0,0.2), 10, 0 , 10, 10);
+}
+.card > Label {
+    -fx-text-color: black;
+    -fx-text-fill: black;
+}
+.card .paragraph {
+    -fx-text-fill: black;
+}
+
+.item_vie_selectable: hover{
+	-fx-background-color: #F44336;
+    -fx-cursor: hand;
+}
+
+.item_view_only{
+	-fx-text-fill: white;
+	-fx-background-color: #5B323C;
+	-fx-background-radius: 30 30 30 30;
+	-fx-font-weight: bold;
+}
+.item_view{
+	-fx-text-fill: white;
+	-fx-background-color: #5B323C;
+	-fx-background-radius: 30 30 30 30;
+	-fx-font-weight: bold;
+}
+
+/********************** TOOOODOOO LIST  ***********************/
+.todoList_task{
+    -fx-padding: 0;
+    -fx-margin: 0;
+    -fx-cursor: hand;
+}
+
+.todoList_taskHover{
+    -fx-background-color: #5B323C;
+    -fx-font-weight: bold;
+}
+
+.todoList_taskSelected{
+    -fx-font-weight: bold;
+    -fx-background-color: #FF0847;
+}
+
+/********************** OTHER ***********************/
+.settingsInfo .label{
+    -fx-text-fill: white;
+}
+
+.title_main_settings{
+    -fx-font-size: 50px;
+
+}
+.title_sub_settings{
+    -fx-font-size: 20px;
+}
+
+.title_subText_settings{
+    -fx-font-size: 8px;
+    -fx-text-fill: blue;
+    -fx-font-fill: blue;
+}
+

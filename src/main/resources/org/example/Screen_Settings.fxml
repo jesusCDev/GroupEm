@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:id="bpAll" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="757.0" prefWidth="806.0" styleClass="background" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controllers.Settings">
+   <center>
+      <SplitPane dividerPositions="0.5" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="background" BorderPane.alignment="CENTER">
+         <items>
+            <ScrollPane fitToHeight="true" fitToWidth="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+               <content>
+                  <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="10.0" styleClass="container">
+                     <children>
+                        <Label styleClass="title_sub" text="Products:" />
+                        <HBox fx:id="hbDevices" />
+                        <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="10.0">
+                           <children>
+                              <TextField fx:id="tfProductsAdding" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="26.0" prefWidth="300.0" HBox.hgrow="ALWAYS" />
+                              <Button mnemonicParsing="false" onAction="#btn_AddValueToDevicesSet" styleClass="addBtn" text="Add" />
+                           </children>
+                        </HBox>
+                        <Label styleClass="title_sub" text="Technologies:">
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin></Label>
+                        <HBox fx:id="hbTech" />
+                        <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="10.0">
+                           <children>
+                              <TextField fx:id="tfTechAdding" prefHeight="26.0" prefWidth="300.0" HBox.hgrow="ALWAYS" />
+                              <Button mnemonicParsing="false" onAction="#btn_AddValuesToTechSet" styleClass="addBtn" text="Add" />
+                           </children>
+                        </HBox>
+                        <Label styleClass="title_sub" text="Todo List:">
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin></Label>
+                        <TabPane fx:id="tpTodoList" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="todoList" tabClosingPolicy="UNAVAILABLE" VBox.vgrow="ALWAYS">
+                          <tabs>
+                            <Tab text="Starting">
+                                 <content>
+                                    <ScrollPane fitToHeight="true" fitToWidth="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+                                       <content>
+                                          <VBox fx:id="vbTodoStart" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" />
+                                       </content>
+                                       <styleClass>
+                                          <String fx:value="container" />
+                                          <String fx:value="background" />
+                                       </styleClass>
+                                    </ScrollPane>
+                                 </content>
+                              </Tab>
+                            <Tab text="Planning">
+                                 <content>
+                                    <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="200.0" prefWidth="200.0">
+                                       <content>
+                                          <VBox fx:id="vbTodoPlan" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" />
+                                       </content>
+                                       <styleClass>
+                                          <String fx:value="container" />
+                                          <String fx:value="background" />
+                                       </styleClass>
+                                    </ScrollPane>
+                                 </content>
+                              </Tab>
+                              <Tab text="Working">
+                                 <content>
+                                    <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="200.0" prefWidth="200.0">
+                                       <content>
+                                          <VBox fx:id="vbTodoWork" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" />
+                                       </content>
+                                       <styleClass>
+                                          <String fx:value="container" />
+                                          <String fx:value="background" />
+                                       </styleClass>
+                                    </ScrollPane>
+                                 </content>
+                              </Tab>
+                              <Tab text="Fixing">
+                                 <content>
+                                    <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="200.0" prefWidth="200.0">
+                                       <content>
+                                          <VBox fx:id="vbTodoFix" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" />
+                                       </content>
+                                       <styleClass>
+                                          <String fx:value="container" />
+                                          <String fx:value="background" />
+                                       </styleClass>
+                                    </ScrollPane>
+                                 </content>
+                              </Tab>
+                              <Tab text="Finished">
+                                 <content>
+                                    <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="200.0" prefWidth="200.0">
+                                       <content>
+                                          <VBox fx:id="vbTodoFinish" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" />
+                                       </content>
+                                       <styleClass>
+                                          <String fx:value="container" />
+                                          <String fx:value="background" />
+                                       </styleClass>
+                                    </ScrollPane>
+                                 </content>
+                              </Tab>
+                          </tabs>
+                        </TabPane>
+                        <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="10.0">
+                           <children>
+                              <TextField fx:id="tfTodoAdding" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="0.0" HBox.hgrow="ALWAYS" />
+                              <Button mnemonicParsing="false" onAction="#btn_addTodoItem" styleClass="addBtn" text="Add" />
+                              <Button fx:id="btnTodoListEdit" mnemonicParsing="false" onAction="#btn_ChangeScreen" styleClass="deleteBtn" text="Delete" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </content>
+               <styleClass>
+                  <String fx:value="container" />
+                  <String fx:value="background" />
+               </styleClass>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </ScrollPane>
+            <VBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" spacing="10.0">
+               <children>
+                  <Label styleClass="title_main_settings" text="DevArchive" />
+                  <Label styleClass="title_sub_settings" text="Visit Allvens.com For Further Help Or Contribution." />
+                  <Label styleClass="title_subText_settings" text="©2018 Allvens Inc." />
+               </children>
+               <styleClass>
+                  <String fx:value="background" />
+                  <String fx:value="container" />
+                  <String fx:value="settingsInfo" />
+               </styleClass>
+            </VBox>
+         </items>
+      </SplitPane>
+   </center>
+   <top>
+      <GridPane BorderPane.alignment="CENTER">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
+               <children>
+                  <Label styleClass="title_main" text="Settings" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#btn_returnToHomeScreen" styleClass="actionBtn" text="Back" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" styleClass="hbContainer" GridPane.columnIndex="2">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#btn_ShowUserInfo" styleClass="actionBtn" text="Help" />
+                  <Button mnemonicParsing="false" onAction="#btn_RestDefaults" styleClass="deleteBtn" text="Default Values" />
+                  <Button mnemonicParsing="false" onAction="#btn_HardReset" styleClass="deleteBtn" text="Hard Reset" />
+               </children>
+            </HBox>
+         </children>
+         <styleClass>
+            <String fx:value="header" />
+            <String fx:value="hbContainer" />
+         </styleClass>
+      </GridPane>
+   </top>
+</BorderPane>

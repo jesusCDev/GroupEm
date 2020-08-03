@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="bpAll" prefHeight="800.0" prefWidth="1500.0" styleClass="background" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controllers.Project_WorkSpace">
+   <center>
+      <SplitPane dividerPositions="0.5" styleClass="background" BorderPane.alignment="CENTER">
+         <items>
+            <ScrollPane fitToHeight="true" fitToWidth="true">
+               <content>
+                  <VBox maxHeight="1.7976931348623157E308">
+                     <children>
+                        <VBox spacing="10.0">
+                           <children>
+                              <HBox>
+                                 <children>
+                                    <Label minWidth="80.0" prefWidth="80.0" styleClass="title_sub" text="Name:">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lbProjectName" styleClass="paragraph" text="Title Name: (unkown)" />
+                                 </children>
+                              </HBox>
+                              <HBox>
+                                 <children>
+                                    <Label minWidth="80.0" prefWidth="80.0" styleClass="title_sub" text="Title:">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lbProjectTitle" styleClass="paragraph" text="Project: Title" />
+                                 </children>
+                              </HBox>
+                              <HBox>
+                                 <children>
+                                    <Label minWidth="80.0" prefWidth="80.0" styleClass="title_sub" text="Status:">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lbProjectStatus" styleClass="paragraph" text="Project Status:" />
+                                 </children>
+                              </HBox>
+                              <Label styleClass="title_sub" text="Purpose:">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lbProjectPurpose" alignment="TOP_LEFT" styleClass="paragraph" text="Project Purpose:" wrapText="true" />
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                        </VBox>
+                        <VBox spacing="10.0">
+                           <children>
+                              <Label styleClass="title_sub" text="Software Used:">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font></Label>
+                              <HBox fx:id="hbTech" />
+                              <Label styleClass="title_sub" text="Device Compatibility:">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font></Label>
+                              <HBox fx:id="hbDevices" />
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                        </VBox>
+                        <Label styleClass="title_sub" text="Summary:">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <VBox fx:id="vbProjectDevelopment" styleClass="card">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                        </VBox>
+                     </children></VBox>
+               </content>
+               <styleClass>
+                  <String fx:value="viewport" />
+                  <String fx:value="background" />
+               </styleClass>
+            </ScrollPane>
+            <ScrollPane fitToHeight="true" fitToWidth="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" pannable="true">
+               <content>
+                  <TabPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="1000.0" styleClass="background" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab text="Todo List">
+                           <content>
+                              <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="1000.0">
+                                 <children>
+                                    <HBox prefWidth="745.0" spacing="10.0">
+                                       <children>
+                                          <TextField fx:id="tfLocalTodoList" maxWidth="1.7976931348623157E308" prefWidth="638.0" HBox.hgrow="ALWAYS" />
+                                          <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#btn_AddLocalTask" styleClass="addBtn" text="Add Task" />
+                                          <Button fx:id="btn_TodoListEdit" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#btn_deleteLocalTask" styleClass="deleteBtn" text="Delete" />
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets top="10.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <TabPane fx:id="tpTodoList" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="1000.0" styleClass="todoLIst" tabClosingPolicy="UNAVAILABLE">
+                                      <tabs>
+                                        <Tab styleClass="todoList" text="Starting">
+                                             <content>
+                                                <ScrollPane fitToHeight="true" fitToWidth="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="1000.0" styleClass="background">
+                                                   <content>
+                                                      <VBox fx:id="vbTodo_Starting" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="1000.0" />
+                                                   </content>
+                                                </ScrollPane>
+                                             </content>
+                                          </Tab>
+                                        <Tab styleClass="todoList" text="Planning">
+                                             <content>
+                                                <ScrollPane fitToHeight="true" fitToWidth="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="background">
+                                                   <content>
+                                                            <VBox fx:id="vbTodo_Planning" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" />
+                                                   </content>
+                                                </ScrollPane>
+                                             </content>
+                                          </Tab>
+                                          <Tab styleClass="todoList" text="Working">
+                                             <content>
+                                                <ScrollPane fitToHeight="true" fitToWidth="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="background">
+                                                   <content>
+                                                      <VBox fx:id="vbTodo_Working" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" />
+                                                   </content>
+                                                </ScrollPane>
+                                             </content>
+                                          </Tab>
+                                          <Tab styleClass="todoList" text="Fixing">
+                                             <content>
+                                                <ScrollPane fitToHeight="true" fitToWidth="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="background">
+                                                   <content>
+                                                      <VBox fx:id="vbTodo_Fixing" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" />
+                                                   </content>
+                                                </ScrollPane>
+                                             </content>
+                                          </Tab>
+                                          <Tab styleClass="todoList" text="Finished">
+                                             <content>
+                                                <ScrollPane fitToHeight="true" fitToWidth="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="background">
+                                                   <content>
+                                                      <VBox fx:id="vbTodo_Finished" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" />
+                                                   </content>
+                                                </ScrollPane>
+                                             </content>
+                                          </Tab>
+                                      </tabs>
+                                    </TabPane>
+                                 </children>
+                              </VBox>
+                           </content>
+                        </Tab>
+                      <Tab text="Development">
+                           <content>
+                              <ScrollPane fitToWidth="true">
+                                 <styleClass>
+                                    <String fx:value="scroll-pane" />
+                                    <String fx:value="viewport" />
+                                    <String fx:value="background" />
+                                 </styleClass>
+                                 <content>
+                                    <VBox>
+                                       <children>
+                                          <ScrollPane fx:id="sbHas" fitToHeight="true" minViewportHeight="10.0">
+                                             <content>
+                                                <HBox fx:id="hbHashTags" alignment="CENTER" maxWidth="1.7976931348623157E308" spacing="10.0" />
+                                             </content>
+                                             <VBox.margin>
+                                                <Insets />
+                                             </VBox.margin>
+                                             <padding>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </padding>
+                                             <styleClass>
+                                                <String fx:value="scroll-pane" />
+                                                <String fx:value="viewport" />
+                                                <String fx:value="background" />
+                                             </styleClass>
+                                          </ScrollPane>
+                                          <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btn_addProjectDevelopment" prefHeight="26.0" prefWidth="728.0" styleClass="addBtn" text="Add Development" VBox.vgrow="ALWAYS">
+                                             <VBox.margin>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </VBox.margin>
+                                          </Button>
+                                          <VBox fx:id="vbProjectDocumentationDevelopmentBtns" spacing="10.0">
+                                             <VBox.margin>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </VBox.margin>
+                                          </VBox>
+                                       </children>
+                                    </VBox>
+                                 </content>
+                              </ScrollPane>
+                           </content>
+                        </Tab>
+                    </tabs>
+                  </TabPane>
+               </content>
+               <styleClass>
+                  <String fx:value="scroll-pane" />
+                  <String fx:value="viewport" />
+               </styleClass>
+            </ScrollPane>
+         </items>
+      </SplitPane>
+   </center>
+   <top>
+      <GridPane styleClass="header" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#btn_ReturnToMainScreen" prefHeight="26.0" prefWidth="79.0" styleClass="actionBtn" text="Back" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
+               <children>
+                  <Label fx:id="lbCurrentProject" alignment="CENTER" styleClass="title_main" text="(Current Open Proejct)">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" styleClass="hbContainer" GridPane.columnIndex="2">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#btn_FolderContainer" styleClass="actionBtn" text="Project Folder" />
+                  <Button mnemonicParsing="false" onAction="#btn_EditCurrentProject" styleClass="deleteBtn" text="Edit Project" />
+               </children>
+            </HBox>
+         </children>
+      </GridPane>
+   </top>
+</BorderPane>
