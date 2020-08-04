@@ -5,8 +5,8 @@ module org.example {
     requires jdom;
     requires java.prefs;
 
-    opens org.example to javafx.fxml;
-    opens org.example.default_methods.installer to javafx.fxml;
-    opens org.example.controllers to javafx.fxml;
-    exports org.example;
+    opens org.allvens to javafx.fxml;
+    opens org.allvens.default_methods.installer to javafx.fxml;
+    opens org.allvens.controllers to javafx.fxml;
+    exports org.allvens;
 }
